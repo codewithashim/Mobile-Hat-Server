@@ -1,239 +1,123 @@
 [
-    {
-      "id": 1,
-      "category_id": 1,
-      "product_name": "Samsung J7",
-      "course_duration": "18h20m",
-      "total_rating": "4.9",
-      "price": 25,
-      "instructer": "Jhon Ruhan",
-      "total_vedio": "30",
-      "course_outline": [
-        "Building a passenger counter app.",
-        "Setting up our JavaScript file.",
-        "Write your first JavaScript variable.",
-        "Basic mathematical operations.",
-        "Reassigning and incrementing.",
-        "Adding a button.",
-        "The onclick event listener.",
-        "Using functions to write less code."
-      ],
-      "img": "https://i.ibb.co/4K1TShD/js-bacise.png",
-      "instructer_img": "https://i.ibb.co/nMLmhpG/download-4.jpg"
-    },
-  
-    {
-      "id": 2,
-      "category_id": 1,
-      "course_name": "Advance Javascript Mastarcy",
-      "course_duration": "60h40m",
-      "total_rating": "5",
-      "price": 30,
-      "instructer": "Jhon Ruhan",
-      "total_vedio": "70",
-      "course_outline": [
-        "Advanced JavaScript Practices.",
-        "Object Oriented Programming.",
-        "Functional Programming.",
-        "Scope and Execution Context.",
-        "Inheritance + Prototype Chain.",
-        "Latest features: ES6, ES7, ES8, ES9, ES10, ES2020, ES2021.",
-        "Closures.",
-        "Asynchronous JavaScript + Event Loop."
-      ],
-      "img": "https://i.ibb.co/qCHYQwt/advance-js.png",
-      "instructer_img": "https://i.ibb.co/nMLmhpG/download-4.jpg"
-    },
-    {
-      "id": 3,
-      "category_id": 1,
-      "course_name": "Advance Javascript And React",
-      "course_duration": "60h50m",
-      "total_rating": "5",
-      "price": 38,
-      "instructer": "Alexa Alina",
-      "total_vedio": "80",
-      "course_outline": [
-        "Introduction to what is React and its basic concepts.",
-        "Learn what is JSX and how it works behind the scenes.",
-        "Learn what are the stateful and stateless components and when to use them.",
-        "Working with function based and class based components.",
-        "Working with React Modules, importing and exporting the modules."
-      ],
-      "img": "https://i.ibb.co/YR6gtGf/react-with-js.png",
-      "instructer_img": "https://i.ibb.co/nMLmhpG/download-4.jpg"
-    },
-    {
-      "id": 4,
-      "category_id": 1,
-      "course_name": "Full Stack Web Development",
-      "course_duration": "550h20m",
-      "total_rating": "5",
-      "price": 100,
-      "instructer": "Jhankar Mahbub Sir",
-      "total_vedio": "500",
-      "course_outline": [
-        "HTML5.",
-        "Css3",
-        "JavaScript.",
-        "Bootstrap",
-        "Tailwind Css",
-        "Javascript Advance Topic",
-        "React Bacise",
-        "React Router",
-        "React Hooks",
-        "Firebase",
-        "Mongodb",
-        "Express Js",
-        "Web Architecture."
-      ],
-      "img": "https://i.ibb.co/175qvX2/full-stack-development.png",
-      "instructer_img": "https://i.ibb.co/WkSSs5v/instructer1.jpg"
-    },
-    {
-      "id": 5,
-      "category_id": 2,
-      "course_name": "Full Digital Marketing",
-      "course_duration": "190h20m",
-      "total_rating": "5",
-      "price": 60,
-      "instructer": "Jhon Smith",
-      "total_vedio": "100",
-      "course_outline": [
-        "Search Engine Optimization",
-        "Search Engine Marketing",
-        "Email Marketing",
-        "Social Media Marketing",
-        "Inbound Marketing",
-        "Content Marketing",
-        "and Web Analytics"
-      ],
-      "img": "https://i.ibb.co/fS8Tf3c/digital-marketing.png",
-      "instructer_img": ""
-    },
-    {
-      "id": 6,
-      "category_id": 2,
-      "course_name": "Advance SEO And Google Knowlage Panel",
-      "course_duration": "160h20m",
-      "total_rating": "5",
-      "price": 90,
-      "instructer": "Saley Herry",
-      "total_vedio": "60",
-      "course_outline": [
-        "Make a Wikipedia and Wikidata page.",
-        "Be ACTIVE on Social Media Platforms.",
-        "Implement a Schema Markup.",
-        " Create Listings on Local Directories.",
-        "On Page Advance SEO"
-      ],
-      "img": "https://i.ibb.co/r6Hg49G/advance-seo.png",
-      "instructer_img": "https://i.ibb.co/nMLmhpG/download-4.jpg"
-    },
-    {
-      "id": 7,
-      "category_id": 3,
-      "course_name": "UI/UX Design",
-      "course_duration": "100h20m",
-      "total_rating": "5",
-      "price": 80,
-      "instructer": "Reyana Alxara",
-      "total_vedio": "100",
-      "course_outline": [
-        "Introduction to UX & Design Thinking.",
-        "User Research.",
-        "User Personas.",
-        "Information Architecture.",
-        "Wireframing & Prototyping.",
-        "Usability Testing.",
-        "Designing Tols Testing"
-      ],
-      "img": "https://i.ibb.co/xGJskd8/ui-ux.png",
-      "instructer_img": "https://i.ibb.co/7zJDnTX/instructer5.jpg"
-    },
-    {
-      "id": 8,
-      "category_id": 4,
-      "course_name": "Data Since And Data Analysis",
-      "course_duration": "250h20m",
-      "total_rating": "5",
-      "price": 100,
-      "instructer": "Alabain Hacker",
-      "total_vedio": "200",
-      "course_outline": [
-        "Python for data analysis",
-        "Intro to statistics",
-        "Inferential statistics",
-        "Regression and Anova",
-        "Exploratory data analysis",
-        "Supervised machine learning"
-      ],
-      "img": "https://i.ibb.co/qmFSDtk/data-since.png",
-      "instructer_img": "https://i.ibb.co/g9cq8kZ/instructer3.jpg"
-    },
-    {
-      "id": 9,
-      "category_id": 5,
-      "course_name": "Finance Manegment",
-      "course_duration": "300h20m",
-      "total_rating": "5",
-      "price": 180,
-      "instructer": "Jeryyana",
-      "total_vedio": "250",
-      "course_outline": [
-        "ACCA.",
-        "Accounting.",
-        "Auditing.",
-        "Banking.",
-        "CIA.",
-        "CIMA.",
-        "CMA.",
-        "Cost & Budgeting."
-      ],
-      "img": "https://i.ibb.co/1rX2KBT/finance-manegment.png",
-      "instructer_img": "https://i.ibb.co/pxnL0zj/instructer6.jpg"
-    },
-    {
-      "id": 10,
-      "category_id": 6,
-      "course_name": "Graphice Design",
-      "course_duration": "450h20m",
-      "total_rating": "5",
-      "price": 200,
-      "instructer": "Alxen Nixon",
-      "total_vedio": "250",
-      "course_outline": [
-        "Introduction to Modern Graphic Design",
-        "Design Building Blocks Essentials",
-        "All About Typography",
-        "Colour and Colour Theory",
-        "Advertisements, Publications, Photography and Visual Identity",
-        "Logotype Shape Designs and Organisation of Documents",
-        "Layout Design and Collage",
-        "Graphics Enhancement and Systems",
-        "Preparing your Portfolio and Course Consolidation"
-      ],
-      "img": "https://i.ibb.co/mDt6ByV/graphice-design.png",
-      "instructer_img": "https://i.ibb.co/g9cq8kZ/instructer3.jpg"
-    },
-    {
-      "id": 11,
-      "category_id": 7,
-      "course_name": "Product Marketing",
-      "course_duration": "180h20m",
-      "total_rating": "5",
-      "price": 200,
-      "instructer": "David Fradin",
-      "total_vedio": "100",
-      "course_outline": [
-        "Cost Strategy. A cost strategy focuses on creating the best product for the lowest price.",
-        "Differentiation Strategy. Price isn't the end-all-be-all when it comes to differentiating your product.",
-        "Focus Strategy.",
-        "Quality Strategy. ...",
-        "Service Strategy"
-      ],
-      "img": "https://i.ibb.co/7xfWSk9/product-marketing.png",
-      "instructer_img": "https://i.ibb.co/WkSSs5v/instructer1.jpg"
-    }
-  ]
-  
+  {
+    "category_id": 1,
+    "product_name": "Samsung J7",
+    "category": "Samsung",
+    "product_price": 10000,
+    "spacification": "4GB RAM, 64GB ROM",
+    "bettary": "5000mAh",
+    "camera": "13MP",
+    "posting-time": "2020-05-05 12:00:00"
+  },
+  {
+    "category_id": 1,
+    "product_name": "Samsung J5",
+    "category": "Samsung",
+    "product_price": 9000,
+    "spacification": "2GB RAM, 16GB ROM",
+    "bettary": "2500mAh",
+    "camera": "8MP",
+    "posting-time": "2020-05-05 12:00:00"
+  },
+  {
+    "category_id": 2,
+    "product_name": "Vivo V15",
+    "category": "ViVo",
+    "product_price": 8000,
+    "spacification": "3GB RAM, 64GB ROM",
+    "bettary": "5000mAh",
+    "camera": "20MP",
+    "posting-time": "2020-05-05 12:00:00"
+  },
+  {
+    "category_id": 2,
+    "category": "ViVo",
+    "product_name": "Vivo V11",
+    "product_price": 7000,
+    "spacification": "2GB RAM, 32GB ROM",
+    "bettary": "3000mAh",
+    "camera": "16MP",
+    "posting-time": "2020-05-05 12:00:00"
+  },
+  {
+    "category_id": 3,
+    "product_name": "Oppo F11",
+    "category": "Oppo",
+    "product_price": 6000,
+    "spacification": "2GB RAM, 32GB ROM",
+    "bettary": "3000mAh",
+    "camera": "16MP",
+    "posting-time": "2020-05-05 12:00:00"
+  },
+  {
+    "category_id": 3,
+    "product_name": "Oppo F9",
+    "category": "Oppo",
+    "product_price": 5000,
+    "spacification": "2GB RAM, 16GB ROM",
+    "bettary": "2500mAh",
+    "camera": "12MP",
+    "posting-time": "2020-05-05 12:00:00"
+  },
+  {
+    "category_id": 4,
+    "product_name": "Nokia 6.1",
+    "category": "Nokia",
+    "product_price": 4000,
+    "spacification": "2GB RAM, 16GB ROM",
+    "bettary": "3000mAh",
+    "camera": "12MP",
+    "posting-time": "2020-05-05 12:00:00"
+  },
+  {
+    "category_id": 4,
+    "product_name": "Nokia 5.1",
+    "category": "Nokia",
+    "product_price": 5000,
+    "spacification": "1GB RAM, 8GB ROM",
+    "bettary": "2000mAh",
+    "camera": "8MP",
+    "posting-time": "2020-05-05 12:00:00"
+  },
+
+  {
+    "category_id": 5,
+    "product_name": "Realme 5",
+    "category": "Realme",
+    "product_price": 3000,
+    "spacification": "2GB RAM, 32GB ROM",
+    "bettary": "3000mAh",
+    "camera": "12MP",
+    "posting-time": "2020-05-05 12:00:00"
+  },
+  {
+    "category_id": 5,
+    "product_name": "Realme 3",
+    "category": "Realme",
+    "product_price": 2000,
+    "spacification": "1GB RAM, 16GB ROM",
+    "bettary": "2000mAh",
+    "camera": "8MP",
+    "posting-time": "2020-05-05 12:00:00"
+  },
+  {
+    "category_id": 6,
+    "product_name": "Redmi Note 7",
+    "category": "Redmi",
+    "product_price": 1000,
+    "spacification": "2GB RAM, 16GB ROM",
+    "bettary": "3000mAh",
+    "camera": "12MP",
+    "posting-time": "2020-05-05 12:00:00"
+  },
+  {
+    "category_id": 6,
+    "product_name": "Redmi Note 5",
+    "category": "Redmi",
+    "product_price": 2000,
+    "spacification": "2GB RAM, 16GB ROM",
+    "bettary": "3000mAh",
+    "camera": "12MP",
+    "posting-time": "2020-05-05 12:00:00"
+  }
+]

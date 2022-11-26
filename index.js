@@ -40,7 +40,7 @@ dbConnection();
 
 // ======== DB COLLECTION ========
 const ProductCollection = client.db("MobileHat").collection("products");
-const CetagoyCollection = client.db("MobileHat").collection("cetagory");
+const CetagoyCollection = client.db("MobileHat").collection("cetegory");
 const UserCollection = client.db("MobileHat").collection("users");
 // ======== DB COLLECTION ========
 
@@ -97,12 +97,11 @@ app.get("/", (req, res) => {
 });
 
 // ============= User Routes =============
-// ceate user
 
+// ceate user
 app.post("/users", async (req, res) => {
   const user = req.body;
   const result = UserCollection.insertOne(user);
-
   try {
     res.send({
       sucess: true,
@@ -117,13 +116,34 @@ app.post("/users", async (req, res) => {
     });
   }
 });
-// get user
+// get users
+app.get("/users", async (req, res) => {
+  const query = {};
+  const cursor = UserCollection.find(query);
+  const result = await cursor.toArray();
+  try {
+    res.send({
+      sucess: true,
+      data: result,
+      message: "Data found successfully",
+    });
+  } catch (error) {
+    res.send({
+      sucess: false,
+      data: [],
+      message: "Data not found",
+    });
+  }
+});
 
 // update user
 
-app.get("/product", (req, res) => {
+// ===== Product Routes =====
+
+app.get("/products", async (req, res) => {
   const query = {};
-  const products = product.find({});
+  const cursor = ProductCollection.find(query);
+  const products = await cursor.toArray();
   res.send(products);
 });
 
@@ -134,6 +154,8 @@ app.get("cetegory/:id", (req, res) => {
   });
   res.send(cetegorys);
 });
+
+// ===== Product Routes =====
 
 // delete user
 
