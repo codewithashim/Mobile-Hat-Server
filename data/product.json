@@ -1,123 +1,135 @@
 [
   {
-    "category_id": 1,
+    "category_id": "63825e75db36b3423f1676b6",
     "product_name": "Samsung J7",
-    "category": "Samsung",
+    "categoryName": "Samsung",
     "product_price": 10000,
     "spacification": "4GB RAM, 64GB ROM",
     "bettary": "5000mAh",
     "camera": "13MP",
-    "posting-time": "2020-05-05 12:00:00"
+    "posting-time": "2020-05-05 12:00:00",
+    "img": "https://i.ibb.co/x7Kwsxx/samsung-j7.jpg"
   },
   {
-    "category_id": 1,
+    "category_id": "63825e75db36b3423f1676b6",
     "product_name": "Samsung J5",
-    "category": "Samsung",
+    "categoryName": "Samsung",
     "product_price": 9000,
     "spacification": "2GB RAM, 16GB ROM",
     "bettary": "2500mAh",
     "camera": "8MP",
-    "posting-time": "2020-05-05 12:00:00"
+    "posting-time": "2020-05-05 12:00:00",
+    "img": "https://i.ibb.co/HxkbDjt/smsung-j5.jpg"
   },
   {
-    "category_id": 2,
+    "category_id": "63825e75db36b3423f1676b7",
     "product_name": "Vivo V15",
-    "category": "ViVo",
+    "categoryName": "ViVo",
     "product_price": 8000,
     "spacification": "3GB RAM, 64GB ROM",
     "bettary": "5000mAh",
     "camera": "20MP",
-    "posting-time": "2020-05-05 12:00:00"
+    "posting_time": "2020-05-05 12:00:00",
+    "img": "https://i.ibb.co/2dXkFVH/vivo-v15.jpg"
   },
   {
-    "category_id": 2,
-    "category": "ViVo",
+    "category_id": "63825e75db36b3423f1676b7",
     "product_name": "Vivo V11",
+    "categoryName": "ViVo",
     "product_price": 7000,
     "spacification": "2GB RAM, 32GB ROM",
     "bettary": "3000mAh",
     "camera": "16MP",
-    "posting-time": "2020-05-05 12:00:00"
+    "posting_time": "2020-05-05 12:00:00",
+    "img": "https://i.ibb.co/kKBDhjT/vivo-v-11.jpg"
   },
   {
-    "category_id": 3,
+    "category_id": "63825e75db36b3423f1676b8",
     "product_name": "Oppo F11",
-    "category": "Oppo",
+    "categoryName": "Oppo",
     "product_price": 6000,
     "spacification": "2GB RAM, 32GB ROM",
     "bettary": "3000mAh",
     "camera": "16MP",
-    "posting-time": "2020-05-05 12:00:00"
+    "posting_time": "2020-05-05 12:00:00",
+    "img": "https://i.ibb.co/vY41Mhm/opp-f11.jpg"
   },
   {
-    "category_id": 3,
+    "category_id": "63825e75db36b3423f1676b8",
     "product_name": "Oppo F9",
-    "category": "Oppo",
+    "categoryName": "Oppo",
     "product_price": 5000,
     "spacification": "2GB RAM, 16GB ROM",
     "bettary": "2500mAh",
     "camera": "12MP",
-    "posting-time": "2020-05-05 12:00:00"
+    "posting_time": "2020-05-05 12:00:00",
+    "img": "https://i.ibb.co/8KbLF57/opp-f9.jpg"
   },
   {
-    "category_id": 4,
+    "category_id": "63825e75db36b3423f1676b9",
     "product_name": "Nokia 6.1",
-    "category": "Nokia",
+    "categoryName": "Nokia",
     "product_price": 4000,
     "spacification": "2GB RAM, 16GB ROM",
     "bettary": "3000mAh",
     "camera": "12MP",
-    "posting-time": "2020-05-05 12:00:00"
+    "posting_time": "2020-05-05 12:00:00",
+    "img": "https://i.ibb.co/PYJrZ8y/nokia-5-6.jpg"
   },
   {
-    "category_id": 4,
+    "category_id": "63825e75db36b3423f1676b9",
     "product_name": "Nokia 5.1",
-    "category": "Nokia",
+    "categoryName": "Nokia",
     "product_price": 5000,
     "spacification": "1GB RAM, 8GB ROM",
     "bettary": "2000mAh",
     "camera": "8MP",
-    "posting-time": "2020-05-05 12:00:00"
+    "posting_time": "2020-05-05 12:00:00",
+    "img": "https://i.ibb.co/pXmG442/nokia-5-5.png"
   },
 
   {
-    "category_id": 5,
+    "category_id": "63825e75db36b3423f1676ba",
     "product_name": "Realme 5",
-    "category": "Realme",
+    "categoryName": "Realme",
     "product_price": 3000,
     "spacification": "2GB RAM, 32GB ROM",
     "bettary": "3000mAh",
     "camera": "12MP",
-    "posting-time": "2020-05-05 12:00:00"
+    "posting_time": "2020-05-05 12:00:00",
+    "img": "https://i.ibb.co/jHphC9K/realmi-5.jpg"
   },
   {
-    "category_id": 5,
+    "category_id": "63825e75db36b3423f1676ba",
     "product_name": "Realme 3",
-    "category": "Realme",
+    "categoryName": "Realme",
     "product_price": 2000,
     "spacification": "1GB RAM, 16GB ROM",
     "bettary": "2000mAh",
     "camera": "8MP",
-    "posting-time": "2020-05-05 12:00:00"
+    "posting_time": "2020-05-05 12:00:00",
+    "img": "https://i.ibb.co/0yhhH9J/realme-3.jpg"
   },
   {
-    "category_id": 6,
+    "category_id": "63825e75db36b3423f1676bb",
     "product_name": "Redmi Note 7",
-    "category": "Redmi",
+    "categoryName": "Redmi",
     "product_price": 1000,
     "spacification": "2GB RAM, 16GB ROM",
     "bettary": "3000mAh",
     "camera": "12MP",
-    "posting-time": "2020-05-05 12:00:00"
+    "posting_time": "2020-05-05 12:00:00",
+    "img": "https://i.ibb.co/KwFxqQL/redmi-not-7.jpg"
   },
   {
-    "category_id": 6,
+    "category_id": "63825e75db36b3423f1676bb",
     "product_name": "Redmi Note 5",
-    "category": "Redmi",
+    "categoryName": "Redmi",
     "product_price": 2000,
     "spacification": "2GB RAM, 16GB ROM",
     "bettary": "3000mAh",
     "camera": "12MP",
-    "posting-time": "2020-05-05 12:00:00"
+    "posting_time": "2020-05-05 12:00:00",
+    "img": "https://i.ibb.co/PTGydSr/redmi-not-5.webp"
   }
 ]

@@ -4,13 +4,10 @@ const port = 8000;
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const { json } = require("express");
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 require("dotenv").config();
 
 // ================================
-
-const product = require("./data/product.json");
-const cetegory = require("./data/cetegory.json");
 
 // ======== MIDDLEWARE ========
 app.use(cors());
@@ -98,7 +95,7 @@ app.get("/", (req, res) => {
 
 // ============= User Routes =============
 
-// ceate user
+// ceate user ============
 app.post("/users", async (req, res) => {
   const user = req.body;
   const result = UserCollection.insertOne(user);
@@ -116,7 +113,7 @@ app.post("/users", async (req, res) => {
     });
   }
 });
-// get users
+// get users =============
 app.get("/users", async (req, res) => {
   const query = {};
   const cursor = UserCollection.find(query);
@@ -147,12 +144,25 @@ app.get("/products", async (req, res) => {
   res.send(products);
 });
 
-app.get("cetegory/:id", (req, res) => {
+app.get("/category", async (req, res) => {
+  const query = {};
+  const cursor = CetagoyCollection.find(query);
+  const cetegory = await cursor.toArray();
+  res.send(cetegory);
+});
+
+app.get("/products/:id", async (req, res) => {
   const id = req.params.id;
-  const cetegorys = product.filter((c) => {
-    c.category_id === id;
-  });
-  res.send(cetegorys);
+  const query = { _id: ObjectId(id) };
+  const product = await ProductCollection.findOne(query);
+  res.send(product);
+});
+
+app.get("/category/:cetagoryName", async (req, res) => {
+  const cetagory = req.params.cetagoryName;
+  const filters = { cetagory, status: "available" };
+  const cetagorys = await ProductCollection.find(filters).toArray();
+  res.send(cetagorys);
 });
 
 // ===== Product Routes =====

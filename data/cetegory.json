@@ -1,45 +1,32 @@
 [
-    {
-      "id": 1,
-      "category": "Web Development",
-      "img": "https://raw.githubusercontent.com/codewithashim/Progrummer-Lab-Server/2803cdbb7e509e04ee4274bc853378bf6299f22f/img/category_1_1.svg",
-      "details": "There are three types of web development roles: developers who specialize in the user interface (“front-end”), those who write the underlying code for running all website operations (“back-end”), and those who manage all aspects of a website (“full stack”)."
-    },
-    {
-      "id": 2,
-      "category": "Digital Marketing",
-      "img": "https://raw.githubusercontent.com/codewithashim/Progrummer-Lab-Server/2803cdbb7e509e04ee4274bc853378bf6299f22f/img/category_1_2.svg",
-      "details": "Digital marketing can be broadly broken into 8 main categories including: Search Engine Optimization, Pay-per-Click, Social Media Marketing, Content Marketing, Email Marketing, Mobile Marketing, Marketing Analytics and Affiliate Marketing ."
-    },
-    {
-      "id": 3,
-      "category": "UI/UX Design",
-      "img": "https://raw.githubusercontent.com/codewithashim/Progrummer-Lab-Server/2803cdbb7e509e04ee4274bc853378bf6299f22f/img/category_1_3.svg",
-      "details": "UX design is all about identifying and solving user problems; UI design is all about creating intuitive, aesthetically-pleasing, interactive interfaces. UX design usually comes first in the product development process, followed by UI"
-    },
-    {
-      "id": 4,
-      "category": "Data Since",
-      "img": "https://raw.githubusercontent.com/codewithashim/Progrummer-Lab-Server/master-branch/img/data-since.png",
-      "details": "data engineering, data preparation, data mining, predictive analytics, machine learning and data visualization, as well as statistics, mathematics and software programming."
-    },
-    {
-      "id": 5,
-      "category": "Finance Manegment",
-      "img": "https://raw.githubusercontent.com/codewithashim/Progrummer-Lab-Server/f2aae6d6d5cefc7e0837312bb389c0ac5bf7ff09/img/category_1_4.svg",
-      "details": "In simple terms, financial management is the business function that deals with investing the available financial resources in a way that greater business success and return-on-investment (ROI) is achieved"
-    },
-    {
-      "id": 6,
-      "category": "Graphice Design",
-      "img": "https://raw.githubusercontent.com/codewithashim/Progrummer-Lab-Server/f2aae6d6d5cefc7e0837312bb389c0ac5bf7ff09/img/category_1_5.svg",
-      "details": "Graphic design is the applied art of arranging image and text to communicate a message. It may be applied in media such as print, electronic media, motion picture, animation, packaging, signs, identities, etc."
-    },
-    {
-      "id": 7,
-      "category": "Product Marketing",
-      "img": "https://raw.githubusercontent.com/codewithashim/Progrummer-Lab-Server/f2aae6d6d5cefc7e0837312bb389c0ac5bf7ff09/img/category_1_6.svg",
-      "details": "Product marketing is the process of developing and executing a marketing strategy for a product. It involves the management of the product throughout its lifecycle, including market research, product development, product positioning, and product promotion."
-    }
-  ]
-  
+  {
+    "id": 1,
+    "categoryName": "Samsung",
+    "details": "See the Samsung phones and tablets"
+  },
+  {
+    "id": 2,
+    "categoryName": "ViVo",
+    "details": "See the ViVo phones and tablets"
+  },
+  {
+    "id": 3,
+    "categoryName": "Oppo",
+    "details": "See the Oppo phones and tablets"
+  },
+  {
+    "id": 4,
+    "categoryName": "Nokia",
+    "details": "See the Nokia phones and tablets"
+  },
+  {
+    "id": 5,
+    "categoryName": "Realme",
+    "details": "See the Realme phones and tablets"
+  },
+  {
+    "id": 6,
+    "categoryName": "Redmi",
+    "details": "See the Redmi phones and tablets"
+  }
+]
