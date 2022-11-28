@@ -1,6 +1,6 @@
 [
   {
-    "category_id": "63825e75db36b3423f1676b6",
+    "cetagory_id": "63825e75db36b3423f1676b6",
     "product_name": "Samsung J7",
     "categoryName": "Samsung",
     "product_price": 10000,
@@ -11,7 +11,7 @@
     "img": "https://i.ibb.co/x7Kwsxx/samsung-j7.jpg"
   },
   {
-    "category_id": "63825e75db36b3423f1676b6",
+    "cetagory_id": "63825e75db36b3423f1676b6",
     "product_name": "Samsung J5",
     "categoryName": "Samsung",
     "product_price": 9000,
@@ -22,7 +22,7 @@
     "img": "https://i.ibb.co/HxkbDjt/smsung-j5.jpg"
   },
   {
-    "category_id": "63825e75db36b3423f1676b7",
+    "cetagory_id": "63825e75db36b3423f1676b7",
     "product_name": "Vivo V15",
     "categoryName": "ViVo",
     "product_price": 8000,
@@ -33,7 +33,7 @@
     "img": "https://i.ibb.co/2dXkFVH/vivo-v15.jpg"
   },
   {
-    "category_id": "63825e75db36b3423f1676b7",
+    "cetagory_id": "63825e75db36b3423f1676b7",
     "product_name": "Vivo V11",
     "categoryName": "ViVo",
     "product_price": 7000,
@@ -44,7 +44,7 @@
     "img": "https://i.ibb.co/kKBDhjT/vivo-v-11.jpg"
   },
   {
-    "category_id": "63825e75db36b3423f1676b8",
+    "cetagory_id": "63825e75db36b3423f1676b8",
     "product_name": "Oppo F11",
     "categoryName": "Oppo",
     "product_price": 6000,
@@ -55,7 +55,7 @@
     "img": "https://i.ibb.co/vY41Mhm/opp-f11.jpg"
   },
   {
-    "category_id": "63825e75db36b3423f1676b8",
+    "cetagory_id": "63825e75db36b3423f1676b8",
     "product_name": "Oppo F9",
     "categoryName": "Oppo",
     "product_price": 5000,
@@ -66,7 +66,7 @@
     "img": "https://i.ibb.co/8KbLF57/opp-f9.jpg"
   },
   {
-    "category_id": "63825e75db36b3423f1676b9",
+    "cetagory_id": "63825e75db36b3423f1676b9",
     "product_name": "Nokia 6.1",
     "categoryName": "Nokia",
     "product_price": 4000,
@@ -77,7 +77,7 @@
     "img": "https://i.ibb.co/PYJrZ8y/nokia-5-6.jpg"
   },
   {
-    "category_id": "63825e75db36b3423f1676b9",
+    "cetagory_id": "63825e75db36b3423f1676b9",
     "product_name": "Nokia 5.1",
     "categoryName": "Nokia",
     "product_price": 5000,
@@ -89,7 +89,7 @@
   },
 
   {
-    "category_id": "63825e75db36b3423f1676ba",
+    "cetagory_id": "63825e75db36b3423f1676ba",
     "product_name": "Realme 5",
     "categoryName": "Realme",
     "product_price": 3000,
@@ -100,7 +100,7 @@
     "img": "https://i.ibb.co/jHphC9K/realmi-5.jpg"
   },
   {
-    "category_id": "63825e75db36b3423f1676ba",
+    "cetagory_id": "63825e75db36b3423f1676ba",
     "product_name": "Realme 3",
     "categoryName": "Realme",
     "product_price": 2000,
@@ -111,7 +111,7 @@
     "img": "https://i.ibb.co/0yhhH9J/realme-3.jpg"
   },
   {
-    "category_id": "63825e75db36b3423f1676bb",
+    "cetagory_id": "63825e75db36b3423f1676bb",
     "product_name": "Redmi Note 7",
     "categoryName": "Redmi",
     "product_price": 1000,
@@ -122,7 +122,7 @@
     "img": "https://i.ibb.co/KwFxqQL/redmi-not-7.jpg"
   },
   {
-    "category_id": "63825e75db36b3423f1676bb",
+    "cetagory_id": "63825e75db36b3423f1676bb",
     "product_name": "Redmi Note 5",
     "categoryName": "Redmi",
     "product_price": 2000,

@@ -37,7 +37,7 @@ dbConnection();
 
 // ======== DB COLLECTION ========
 const ProductCollection = client.db("MobileHat").collection("products");
-const CetagoyCollection = client.db("MobileHat").collection("cetegory");
+const CetagoyCollection = client.db("MobileHat").collection("category");
 const UserCollection = client.db("MobileHat").collection("users");
 // ======== DB COLLECTION ========
 
@@ -144,13 +144,6 @@ app.get("/products", async (req, res) => {
   res.send(products);
 });
 
-app.get("/category", async (req, res) => {
-  const query = {};
-  const cursor = CetagoyCollection.find(query);
-  const cetegory = await cursor.toArray();
-  res.send(cetegory);
-});
-
 app.get("/products/:id", async (req, res) => {
   const id = req.params.id;
   const query = { _id: ObjectId(id) };
@@ -158,9 +151,18 @@ app.get("/products/:id", async (req, res) => {
   res.send(product);
 });
 
-app.get("/category/:cetagoryName", async (req, res) => {
-  const cetagory = req.params.cetagoryName;
-  const filters = { cetagory, status: "available" };
+app.get("/category", async (req, res) => {
+  const query = {};
+  const cursor = CetagoyCollection.find(query);
+  const cetegory = await cursor.toArray();
+  res.send(cetegory);
+});
+
+app.get("/category/:categoryName", async (req, res) => {
+  const categoryName = req.params.categoryName;
+  console.log(categoryName);
+  const filters = { categoryName };
+  console.log(filters);
   const cetagorys = await ProductCollection.find(filters).toArray();
   res.send(cetagorys);
 });
