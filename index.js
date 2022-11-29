@@ -39,6 +39,8 @@ dbConnection();
 const ProductCollection = client.db("MobileHat").collection("products");
 const CetagoyCollection = client.db("MobileHat").collection("category");
 const UserCollection = client.db("MobileHat").collection("users");
+const BookingCollection = client.db("MobileHat").collection("bookings");
+
 // ======== DB COLLECTION ========
 
 // ======== JWT TOKEN ========
@@ -168,6 +170,16 @@ app.get("/category/:categoryName", async (req, res) => {
 });
 
 // ===== Product Routes =====
+
+// ========== Booking Routes ==========
+
+app.post("/bookings", async (req, res) => {
+  const booking = req.body;
+  const result = await BookingCollection.insertOne(booking);
+  res.send(result);
+});
+
+// ========== Booking Routes ==========
 
 // delete user
 
