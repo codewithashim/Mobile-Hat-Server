@@ -173,10 +173,42 @@ app.get("/category/:categoryName", async (req, res) => {
 
 // ========== Booking Routes ==========
 
+// app.post("/bookings", async (req, res) => {
+//   const booking = req.body;
+//   const result = await BookingCollection.insertOne(booking);
+//   res.send(result);
+// });
+
 app.post("/bookings", async (req, res) => {
   const booking = req.body;
-  const result = await BookingCollection.insertOne(booking);
-  res.send(result);
+  const query = {
+    email: booking.email,
+  };
+  try {
+    const result = await BookingCollection.insertOne(booking);
+
+    res.send({
+      sucess: true,
+      data: result,
+      message: "Data inserted successfully",
+    });
+  } catch (error) {
+    res.send({
+      sucess: false,
+      data: [],
+      message: "Data not inserted",
+    });
+  }
+});
+
+app.get("/bookings", async (req, res) => {
+  let query = {};
+  if (req.query.email) {
+    query = { email: req.query.email };
+  }
+  const cursor = BookingCollection.find(query);
+  const bookings = await cursor.toArray();
+  res.send(bookings);
 });
 
 // ========== Booking Routes ==========
