@@ -40,6 +40,7 @@ const ProductCollection = client.db("MobileHat").collection("products");
 const CetagoyCollection = client.db("MobileHat").collection("category");
 const UserCollection = client.db("MobileHat").collection("users");
 const BookingCollection = client.db("MobileHat").collection("bookings");
+const AdvatiseCollection = client.db("MobileHat").collection("advatise");
 
 // ======== DB COLLECTION ========
 
@@ -139,6 +140,24 @@ app.get("/users", async (req, res) => {
 
 // ===== Product Routes =====
 
+app.post("/products", async (req, res) => {
+  const product = req.body;
+  const result = ProductCollection.insertOne(product);
+  try {
+    res.send({
+      sucess: true,
+      data: result,
+      message: "Data inserted successfully",
+    });
+  } catch (error) {
+    res.send({
+      sucess: false,
+      data: [],
+      message: "Data not inserted",
+    });
+  }
+});
+
 app.get("/products", async (req, res) => {
   const query = {};
   const cursor = ProductCollection.find(query);
@@ -173,20 +192,15 @@ app.get("/category/:categoryName", async (req, res) => {
 
 // ========== Booking Routes ==========
 
-// app.post("/bookings", async (req, res) => {
-//   const booking = req.body;
-//   const result = await BookingCollection.insertOne(booking);
-//   res.send(result);
-// });
 
 app.post("/bookings", async (req, res) => {
   const booking = req.body;
   const query = {
     email: booking.email,
   };
+
   try {
     const result = await BookingCollection.insertOne(booking);
-
     res.send({
       sucess: true,
       data: result,
@@ -212,6 +226,35 @@ app.get("/bookings", async (req, res) => {
 });
 
 // ========== Booking Routes ==========
+
+// ============= Advatise Route =============
+app.post("/advatise", async (req, res) => {
+  const advatise = req.body;
+  try {
+    const result = await AdvatiseCollection.insertOne(advatise);
+    res.send({
+      sucess: true,
+      data: result,
+      message: "Data inserted successfully",
+    });
+  } catch (error) {
+    res.send({
+      sucess: false,
+      data: [],
+      message: "Data not inserted",
+    });
+  }
+});
+
+app.get("/advatise", async (req, res) => {
+  const query = {};
+
+  const cursor = AdvatiseCollection.find(query);
+  const advatise = await cursor.toArray();
+  res.send(advatise);
+});
+
+// ============= Advatise Route =============
 
 // delete user
 
