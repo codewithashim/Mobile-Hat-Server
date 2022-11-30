@@ -120,16 +120,6 @@ app.post("/users", async (req, res) => {
 });
 // get users =============
 app.get("/users", async (req, res) => {
-  const buyer = {
-    role: "buyer",
-  };
-  const seller = {
-    role: "seller",
-  };
-  const admin = {
-    role: "admin",
-  };
-
   const query = {};
   const cursor = UserCollection.find(query);
   const result = await cursor.toArray();
@@ -191,8 +181,7 @@ app.get("/users/seller/:email", async (req, res) => {
   }
 });
 
-// Make admin =====================================
-
+// Make admin ====================================
 app.get("/users/admin/:email", async (req, res) => {
   const email = req.params.email;
   const query = { email };
@@ -215,7 +204,7 @@ app.put("/users/admin/:id", async (req, res) => {
 
 // make seller =====================================
 
-app.get("/users/seller/:email", async (req, res) => {
+app.get("/users/sellers/:email", async (req, res) => {
   const email = req.params.email;
   const query = { email };
   const user = await UserCollection.findOne(query);
@@ -224,12 +213,13 @@ app.get("/users/seller/:email", async (req, res) => {
 
 // make buyer =====================================
 
-app.get("/users/buyer/:email", async (req, res) => {
+app.get("/users/buyers/:email", async (req, res) => {
   const email = req.params.email;
   const query = { email };
   const user = await UserCollection.findOne(query);
   res.send({ isBuyer: user?.role === "buyer" });
 });
+
 
 // update user
 
