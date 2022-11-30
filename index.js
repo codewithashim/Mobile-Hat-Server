@@ -79,7 +79,7 @@ function verifyJWT(req, res, next) {
 
 const verifyAdmin = async (req, res, next) => {
   const decoded = req.decoded.email;
-  const users = await userCollection.findOne({ email: decoded });
+  const users = await UserCollection.findOne({ email: decoded });
   console.log(users);
   if (users?.role !== "admin") {
     return res.status(401).send({
@@ -100,6 +100,7 @@ app.get("/", (req, res) => {
 // ============= User Routes =============
 
 // ceate user ============
+
 app.post("/users", async (req, res) => {
   const user = req.body;
   const result = UserCollection.insertOne(user);
@@ -135,6 +136,46 @@ app.get("/users", async (req, res) => {
       message: "Data not found",
     });
   }
+});
+
+// Make admin =====================================
+
+app.get("/users/admin/:email", async (req, res) => {
+  const email = req.params.email;
+  const query = { email };
+  const user = await UserCollection.findOne(query);
+  res.send({ isAdmin: user?.role === "admin" });
+});
+
+app.put("/users/admin/:id", async (req, res) => {
+  const id = req.params.id;
+  const filters = { _id: ObjectId(id) };
+  const options = { upsert: true };
+  const updateDoc = {
+    $set: {
+      role: "admin",
+    },
+  };
+  const result = await UserCollection.updateOne(filters, updateDoc, options);
+  res.send(result);
+});
+
+// make seller =====================================
+
+app.get("/users/seller/:email", async (req, res) => {
+  const email = req.params.email;
+  const query = { email };
+  const user = await UserCollection.findOne(query);
+  res.send({ isSeller: user?.role === "seller" });
+});
+
+// make buyer =====================================
+
+app.get("/users/buyer/:email", async (req, res) => {
+  const email = req.params.email;
+  const query = { email };
+  const user = await UserCollection.findOne(query);
+  res.send({ isBuyer: user?.role === "buyer" });
 });
 
 // update user
@@ -230,7 +271,6 @@ app.get("/bookings", async (req, res) => {
 
 app.post("/wishlist", async (req, res) => {
   const wishlist = req.body;
-
   try {
     const result = await WishlistCollection.insertOne(wishlist);
     res.send({
