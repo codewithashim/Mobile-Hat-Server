@@ -138,6 +138,27 @@ app.get("/users", async (req, res) => {
   }
 });
 
+// delete user ============
+
+app.delete("/users/:id", async (req, res) => {
+  const id = req.params.id;
+  const query = { _id: ObjectId(id) };
+  const result = await UserCollection.deleteOne(query);
+  try {
+    res.send({
+      sucess: true,
+      data: result,
+      message: "Data deleted successfully",
+    });
+  } catch (error) {
+    res.send({
+      sucess: false,
+      data: [],
+      message: "Data not deleted",
+    });
+  }
+})
+
 // get buyer from users =============
 app.get("/users/buyer/:email", async (req, res) => {
   const email = req.params.email;
@@ -219,7 +240,6 @@ app.get("/users/buyers/:email", async (req, res) => {
   const user = await UserCollection.findOne(query);
   res.send({ isBuyer: user?.role === "buyer" });
 });
-
 
 // update user
 
