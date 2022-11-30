@@ -157,12 +157,11 @@ app.delete("/users/:id", async (req, res) => {
       message: "Data not deleted",
     });
   }
-})
+});
 
 // get buyer from users =============
-app.get("/users/buyer/:email", async (req, res) => {
-  const email = req.params.email;
-  const query = { email: email };
+app.get("/users/buyer/", async (req, res) => {
+  const query = { role: "buyer" };
   const cursor = UserCollection.find(query);
   const result = await cursor.toArray();
   try {
@@ -180,11 +179,29 @@ app.get("/users/buyer/:email", async (req, res) => {
   }
 });
 
+app.delete("/users/buyer/:id", async (req, res) => {
+  const id = req.params.id;
+  const query = { _id: ObjectId(id) };
+  const result = await UserCollection.deleteOne(query);
+  try {
+    res.send({
+      sucess: true,
+      data: result,
+      message: "Data deleted successfully",
+    });
+  } catch (error) {
+    res.send({
+      sucess: false,
+      data: [],
+      message: "Data not deleted",
+    });
+  }
+});
+
 // get seller from users =============
 
-app.get("/users/seller/:email", async (req, res) => {
-  const email = req.params.email;
-  const query = { email: email };
+app.get("/users/seller/", async (req, res) => {
+  const query = { role: "seller" };
   const cursor = UserCollection.find(query);
   const result = await cursor.toArray();
   try {
