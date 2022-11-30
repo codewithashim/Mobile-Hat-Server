@@ -120,7 +120,60 @@ app.post("/users", async (req, res) => {
 });
 // get users =============
 app.get("/users", async (req, res) => {
+  const buyer = {
+    role: "buyer",
+  };
+  const seller = {
+    role: "seller",
+  };
+  const admin = {
+    role: "admin",
+  };
+
   const query = {};
+  const cursor = UserCollection.find(query);
+  const result = await cursor.toArray();
+  try {
+    res.send({
+      sucess: true,
+      data: result,
+      message: "Data found successfully",
+    });
+  } catch (error) {
+    res.send({
+      sucess: false,
+      data: [],
+      message: "Data not found",
+    });
+  }
+});
+
+// get buyer from users =============
+app.get("/users/buyer/:email", async (req, res) => {
+  const email = req.params.email;
+  const query = { email: email };
+  const cursor = UserCollection.find(query);
+  const result = await cursor.toArray();
+  try {
+    res.send({
+      sucess: true,
+      data: result,
+      message: "Data found successfully",
+    });
+  } catch (error) {
+    res.send({
+      sucess: false,
+      data: [],
+      message: "Data not found",
+    });
+  }
+});
+
+// get seller from users =============
+
+app.get("/users/seller/:email", async (req, res) => {
+  const email = req.params.email;
+  const query = { email: email };
   const cursor = UserCollection.find(query);
   const result = await cursor.toArray();
   try {
