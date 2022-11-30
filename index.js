@@ -41,6 +41,7 @@ const CetagoyCollection = client.db("MobileHat").collection("category");
 const UserCollection = client.db("MobileHat").collection("users");
 const BookingCollection = client.db("MobileHat").collection("bookings");
 const AdvatiseCollection = client.db("MobileHat").collection("advatise");
+const WishlistCollection = client.db("MobileHat").collection("wishlist");
 
 // ======== DB COLLECTION ========
 
@@ -192,13 +193,11 @@ app.get("/category/:categoryName", async (req, res) => {
 
 // ========== Booking Routes ==========
 
-
 app.post("/bookings", async (req, res) => {
   const booking = req.body;
   const query = {
     email: booking.email,
   };
-
   try {
     const result = await BookingCollection.insertOne(booking);
     res.send({
@@ -226,6 +225,39 @@ app.get("/bookings", async (req, res) => {
 });
 
 // ========== Booking Routes ==========
+
+// wishlist routes
+
+app.post("/wishlist", async (req, res) => {
+  const wishlist = req.body;
+
+  try {
+    const result = await WishlistCollection.insertOne(wishlist);
+    res.send({
+      sucess: true,
+      data: result,
+      message: "Data inserted successfully",
+    });
+  } catch (error) {
+    res.send({
+      sucess: false,
+      data: [],
+      message: "Data not inserted",
+    });
+  }
+});
+
+app.get("/wishlist", async (req, res) => {
+  let query = {};
+  if (req.query.email) {
+    query = { email: req.query.email };
+  }
+  const cursor = WishlistCollection.find(query);
+  const wishlist = await cursor.toArray();
+  res.send(wishlist);
+});
+
+// wishlist routes
 
 // ============= Advatise Route =============
 app.post("/advatise", async (req, res) => {
