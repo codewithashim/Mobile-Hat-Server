@@ -221,7 +221,7 @@ app.get("/users/seller/", async (req, res) => {
 
 // get my buyer from users =============
 
-app.get("/users/mybuyer/", verifyJWT, async (req, res) => {
+app.get("/users/mybuyer/", async (req, res) => {
   const decoded = req.decoded.email;
   const query = { role: "buyer", email: decoded };
   const cursor = UserCollection.find(query);
@@ -261,7 +261,7 @@ app.delete("/users/seller/:id", async (req, res) => {
 });
 
 // Make admin ====================================
-app.get("/users/admin/:email", async (req, res) => {
+app.get("/users/admin/:email", verifyJWT, verifyAdmin, async (req, res) => {
   const email = req.params.email;
   const query = { email };
   const user = await UserCollection.findOne(query);
@@ -283,7 +283,7 @@ app.put("/users/admin/:id", async (req, res) => {
 
 // make seller =====================================
 
-app.get("/users/sellers/:email", async (req, res) => {
+app.get("/users/sellers/:email", verifyJWT, async (req, res) => {
   const email = req.params.email;
   const query = { email };
   const user = await UserCollection.findOne(query);
@@ -292,7 +292,7 @@ app.get("/users/sellers/:email", async (req, res) => {
 
 // make buyer =====================================
 
-app.get("/users/buyers/:email", async (req, res) => {
+app.get("/users/buyers/:email", verifyJWT, async (req, res) => {
   const email = req.params.email;
   const query = { email };
   const user = await UserCollection.findOne(query);
@@ -305,7 +305,7 @@ app.get("/users/buyers/:email", async (req, res) => {
 
 // reported product =============
 
-app.patch("/products/report/:id", async (req, res) => {
+app.patch("/products/report/:id", verifyAdmin, async (req, res) => {
   const id = req.params.id;
   const filters = { _id: ObjectId(id) };
   const options = { upsert: true };
@@ -320,7 +320,7 @@ app.patch("/products/report/:id", async (req, res) => {
 
 // get my product =============
 
-app.get("/products/myproduct/", verifyJWT, async (req, res) => {
+app.get("/products/myproduct/", async (req, res) => {
   const decoded = req.decoded.email;
   const query = { email: decoded };
   const cursor = ProductCollection.find(query);
@@ -341,7 +341,7 @@ app.get("/products/myproduct/", verifyJWT, async (req, res) => {
 });
 
 // get reported product =============
-app.get("/products/report/", async (req, res) => {
+app.get("/products/report/", verifyJWT, async (req, res) => {
   const query = { reported: true };
   const cursor = ProductCollection.find(query);
   const result = await cursor.toArray();
@@ -362,7 +362,7 @@ app.get("/products/report/", async (req, res) => {
 
 // delete reported product =============
 
-app.delete("/products/report/:id", async (req, res) => {
+app.delete("/products/report/:id", verifyJWT, async (req, res) => {
   const id = req.params.id;
   const query = { _id: ObjectId(id) };
   const result = await ProductCollection.deleteOne(query);
