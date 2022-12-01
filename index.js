@@ -219,6 +219,28 @@ app.get("/users/seller/", async (req, res) => {
   }
 });
 
+// get my buyer from users =============
+
+app.get("/users/mybuyer/", verifyJWT, async (req, res) => {
+  const decoded = req.decoded.email;
+  const query = { role: "buyer", email: decoded };
+  const cursor = UserCollection.find(query);
+  const result = await cursor.toArray();
+  try {
+    res.send({
+      sucess: true,
+      data: result,
+      message: "Data found successfully",
+    });
+  } catch (error) {
+    res.send({
+      sucess: false,
+      data: [],
+      message: "Data not found",
+    });
+  }
+});
+
 app.delete("/users/seller/:id", async (req, res) => {
   const id = req.params.id;
   const query = { _id: ObjectId(id) };
@@ -283,7 +305,7 @@ app.get("/users/buyers/:email", async (req, res) => {
 
 // reported product =============
 
-app.put("/products/report/:id", async (req, res) => {
+app.patch("/products/report/:id", async (req, res) => {
   const id = req.params.id;
   const filters = { _id: ObjectId(id) };
   const options = { upsert: true };
@@ -294,6 +316,28 @@ app.put("/products/report/:id", async (req, res) => {
   };
   const result = await ProductCollection.updateOne(filters, updateDoc, options);
   res.send(result);
+});
+
+// get my product =============
+
+app.get("/products/myproduct/", verifyJWT, async (req, res) => {
+  const decoded = req.decoded.email;
+  const query = { email: decoded };
+  const cursor = ProductCollection.find(query);
+  const result = await cursor.toArray();
+  try {
+    res.send({
+      sucess: true,
+      data: result,
+      message: "Data found successfully",
+    });
+  } catch (error) {
+    res.send({
+      sucess: false,
+      data: [],
+      message: "Data not found",
+    });
+  }
 });
 
 // get reported product =============
@@ -316,6 +360,27 @@ app.get("/products/report/", async (req, res) => {
   }
 });
 
+// delete reported product =============
+
+app.delete("/products/report/:id", async (req, res) => {
+  const id = req.params.id;
+  const query = { _id: ObjectId(id) };
+  const result = await ProductCollection.deleteOne(query);
+  try {
+    res.send({
+      sucess: true,
+      data: result,
+      message: "Data deleted successfully",
+    });
+  } catch (error) {
+    res.send({
+      sucess: false,
+      data: [],
+      message: "Data not deleted",
+    });
+  }
+});
+
 app.post("/products", async (req, res) => {
   const product = req.body;
   const result = ProductCollection.insertOne(product);
@@ -330,6 +395,36 @@ app.post("/products", async (req, res) => {
       sucess: false,
       data: [],
       message: "Data not inserted",
+    });
+  }
+});
+
+app.get("/productsGet", async (req, res) => {});
+
+app.get("/myproducts", async (req, res) => {
+  const email = req.query.email;
+  console.log(email);
+  const query = { seller_email: email };
+  const result = await ProductCollection.find(query).toArray();
+  res.send(result);
+});
+
+app.delete("/myproducts/:id", async (req, res) => {
+  const id = req.params.id;
+  const query = { _id: ObjectId(id) };
+  const result = await ProductCollection.deleteOne(query);
+
+  try {
+    res.send({
+      sucess: true,
+      data: result,
+      message: "Data deleted successfully",
+    });
+  } catch (error) {
+    res.send({
+      sucess: false,
+      data: [],
+      message: "Data not deleted",
     });
   }
 });
